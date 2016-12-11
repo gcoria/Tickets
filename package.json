@@ -1,0 +1,14 @@
+  {
+  "name": "tickets",
+  "version": "1.0.0",
+  "description": "Sell tickets",
+  "main": "index.js",
+  "scripts" : {
+    "start" : "node app.js"
+  },
+  "author": "Gaston Coria",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

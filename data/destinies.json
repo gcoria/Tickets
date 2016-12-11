@@ -1,0 +1,25 @@
+{
+   "destiny_1" : {
+      "name" : "Murphy",
+	  "price" : "[100, 200, 300, 400]",
+	  "profession" : "teacher",
+	  "id": 1
+   },
+   "destiny_2" : {
+      "name" : "suresh",
+	  "price" : "[100, 200, 300, 400]",
+	  "profession" : "librarian",
+	  "id": 2
+   },
+   "destiny_3" : {
+      "name" : "ramesh",
+	  "price" : "[100, 200, 300, 400]",
+	  "profession" : "clerk",
+	  "id": 3
+   },
+   "destiny_4" : {
+      "name" : "ramesh",
+	  "price" : "[100, 200, 300, 400]",
+	  "profession" : "clerk",
+	  "id": 3
+}
