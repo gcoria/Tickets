@@ -22,7 +22,7 @@ var data = JSON.stringify({
 
 var get_travels = {
   host: 'localhost',
-  port: '4000',
+  port: '5500',
   path: '/listDestinies',
   method: 'GET',
   headers: {
@@ -31,7 +31,10 @@ var get_travels = {
   }
 };
 
-var travels;
+var travels = [];
+var data = JSON.stringify({
+  'id': '2'
+});
 var req = http.request(get_travels, function(res) {
   res.setEncoding('utf8');
   res.on('data', function(chunk) {
@@ -43,15 +46,30 @@ var req = http.request(get_travels, function(res) {
 });
 
 console.log(travels);
+req.write(data)
 req.end();
 
-app.get('*', function(req, res){
+app.get('/', function(req, res) {
   var travels = [];
   res.render('index.html.ejs', {
-	travels: travels
+  travels: travels
   });
 });
 
+app.get('/message', function(req, res) {
+  console.log("Lista")
+  var travels = [];
+  res.render('index.html.ejs', {
+  travels: travels
+    // Run your LED toggling code here
+  });
+});
+
+app.get('*', function(req, res){
+  console.log("Error 404");
+});
+
 app.listen(app.get('port'), function() {
+
 	
 });

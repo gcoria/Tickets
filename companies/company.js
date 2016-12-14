@@ -1,9 +1,9 @@
 var express = require('express');
 var company = express();
+var fs = require("fs");
 
 //routes
 var router = express.Router();
-var fs = require("fs");
 
 router.use(function (req,res,next) {
   console.log("/" + req.method);

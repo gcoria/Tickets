@@ -19,14 +19,6 @@ router.get("/",function(req,res){
   res.render(views + 'travels.html', {layout: false, data: data});
 });
 
-router.get("/companies",function(req,res){
-  res.sendFile(views + "companies.html");
-});
-
-router.get("/destinations",function(req,res){
-  res.sendFile(views + "destinations.html");
-});
-
 app.use("/",router);
 
 app.engine('html', require('ejs').renderFile);
@@ -52,19 +44,24 @@ var get_travels = {
   }
 };
 
-var req = http.request(get_travels, function(res) {
-  var msg = '';
 
-  res.setEncoding('utf8');
-  res.on('data', function(chunk) {
-    msg += chunk;
+function list_travels(){
+  var msg = [];
+  var req = http.request(get_travels, function(res) {
+  
+    res.setEncoding('utf8');
+    res.on('data', function(chunk) {
+      msg = chunk;
+    });
+      res.on('end', function() {
+    });
   });
-    res.on('end', function() {
-  });
-});
+  
+  req.write(data);
+  req.end();
+  return msg;
+}
 
-req.write(data);
-req.end();
 
 //reserve
 var server = app.listen(5000,function() {
