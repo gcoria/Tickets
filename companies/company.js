@@ -5,7 +5,6 @@ var company = express();
 var router = express.Router();
 var fs = require("fs");
 
-
 router.use(function (req,res,next) {
   console.log("/" + req.method);
   next();
@@ -16,12 +15,9 @@ company.use("/",router);
 //api
 company.get('/listDestinies', function (req, res) {
   fs.readFile(__dirname + "/" + "destinies.json", 'utf8', function (err, data) {
-    console.log( data );
     res.end( data );
   });
 })
-
-
 
 var server = company.listen(4000,function() {
 

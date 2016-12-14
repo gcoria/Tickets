@@ -7,6 +7,8 @@ var views = __dirname + '/views/';
 var info = __dirname + '/data/';
 var fs = require("fs");
 
+
+
 router.use(function (req,res,next) {
   console.log("/" + req.method);
   next();
@@ -14,6 +16,7 @@ router.use(function (req,res,next) {
 
 router.get("/",function(req,res){
   res.sendFile(views + "index.html");
+  res.render(views + 'travels.html', {layout: false, data: data});
 });
 
 router.get("/companies",function(req,res){
@@ -26,6 +29,8 @@ router.get("/destinations",function(req,res){
 
 app.use("/",router);
 
+app.engine('html', require('ejs').renderFile);
+
 app.use("*",function(req,res){
   res.sendFile(views + "404.html");
 });
@@ -36,7 +41,7 @@ var data = JSON.stringify({
   'id': '2'
 });
 
-var options = {
+var get_travels = {
   host: 'localhost',
   port: '4000',
   path: '/listDestinies',
@@ -47,24 +52,21 @@ var options = {
   }
 };
 
-var req = http.request(options, function(res) {
+var req = http.request(get_travels, function(res) {
   var msg = '';
 
   res.setEncoding('utf8');
   res.on('data', function(chunk) {
     msg += chunk;
   });
-  res.on('end', function() {
-    console.log("call service");
-    console.log(JSON.parse(msg));
-    console.log("***********");
+    res.on('end', function() {
   });
 });
 
 req.write(data);
 req.end();
-//reserve
 
+//reserve
 var server = app.listen(5000,function() {
 
   //var host = server.address().address

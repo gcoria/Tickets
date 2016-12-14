@@ -1,20 +1,11 @@
 {
    "destiny_1" : {
-      "name" : "Murphy",
-	  "password" : "password1",
-	  "profession" : "teacher",
-	  "id": 1
+      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
    },
    "destiny_2" : {
-      "name" : "suresh",
-	  "password" : "password2",
-	  "profession" : "librarian",
-	  "id": 2
+      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
    },
    "destiny_3" : {
-      "name" : "ramesh",
-	  "password" : "password3",
-	  "profession" : "clerk",
-	  "id": 3
+      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
    }
 }
