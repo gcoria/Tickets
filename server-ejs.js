@@ -66,8 +66,10 @@ app.get('/message', function(req, res) {
 });
 
 app.get('*', function(req, res){
-  console.log("Error 404");
+  // console.log("Error 404");
+  res.render('404.html.ejs');
 });
+
 
 app.listen(app.get('port'), function() {
 
