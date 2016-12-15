@@ -18,17 +18,17 @@
           </ul>
         </nav>
       </div>
-      <br/>
+
       <div class="jumbotron text-center">
         <div class="container">
           <div class="page-header">
             <h1>Elija su Paquete</h1>
           </div>
+
+          <!-- origin city -->
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <div class="col-md-3">
-                </div>
                 <div class="col-md-6">
                    <h3>Ciudad de Origen</h3>
                   <select class="form-control" id="origin">
@@ -41,15 +41,25 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- buton search -->
+          <div class="row">
             <div class="col-md-6">
-              <button onclick="message()" class="btn btn-lg btn-success">Busqueda</button>
+               <div class="form-group">
+                    <div class="col-md-6">
+                      <div class="col-md-2">
+                        <button onclick="message()" class="btn btn-lg btn-success">Busqueda</button>
+                      </div>
+                    </div>
+              </div>
             </div>
-          </div><br>
+          </div>
+
+          <!-- Destination city -->
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <div class="col-md-3">
-                </div>
                 <div class="col-md-6">
                   <h3>ciudad de Destino</h3>
                   <select class="form-control" id="destiny">
@@ -63,12 +73,34 @@
               </div>
             </div>
           </div>
+
+          <!-- Seating selection -->
+          <br></br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-6">
+                   <h3>Cantidad de asientos</h3>
+                  <select class="form-control" id="origin">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <br></br>
           <%- include travels.ejs %>
         </div>
       </div>
     </div>
   </body>
+
   <footer class="jumbotron">
     <font color=#black><center>&copy;viajero.com</center></font>
   </footer>
