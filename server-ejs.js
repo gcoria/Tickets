@@ -52,9 +52,11 @@ var get_cancel = {
 };
 
 var travels = [];
-var data = JSON.stringify({
-  'id': '2'
-});
+
+// var data = JSON.stringify({
+//   'id': '2'
+// });
+
 var req = http.request(get_travels, function(res) {
   res.setEncoding('utf8');
   res.on('data', function(chunk) {
