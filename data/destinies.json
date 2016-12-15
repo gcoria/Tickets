@@ -1,11 +1,8 @@
-{
-   "destiny_1" : {
-      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
-   },
-   "destiny_2" : {
-      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
-   },
-   "destiny_3" : {
-      "origin": "Bloody Mary", "destiny": "la concha", "escalas": "a,b,c", "precio": "500","action": "Reservar"
-   }
+{ "destinies": 
+  [
+    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" },
+    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" },
+    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" }
+  ]
 }
+

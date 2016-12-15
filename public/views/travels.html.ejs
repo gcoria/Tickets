@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="travels">
   <h2>Elija entre sus opciones de viaje</h2>            
   <table class="table table-responsive text-center">
     <thead>
@@ -11,15 +11,15 @@
       </tr>
     </thead>
     <tbody>
-      <% travels.forEach(function(travel) { %>
+      <% for(var i=0; i< travels.length; i++) {%>
         <tr>
-          <td><%= travel.origin %></td>
-          <td><%= travel.destiny %></td>
-          <td><%= travel.escalas %></td>
-          <td><%= travel.precio %></td>
-          <td><%= travel.action %></td>
+          <td><%= travels[i].origin  %></td>
+          <td><%= travels[i].destiny %></td>
+          <td><%= travels[i].escalas %></td>
+          <td><%= travels[i].precio  %></td>
+          <td><%= travels[i].action  %></td>
         </tr>
-       <% }); %>
+       <% }; %>
     </tbody>
   </table>
 </div>

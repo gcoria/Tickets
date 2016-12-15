@@ -37,38 +37,23 @@ var data = JSON.stringify({
 var req = http.request(get_travels, function(res) {
   res.setEncoding('utf8');
   res.on('data', function(chunk) {
-  	console.log(chunk);
-  	return chunk;
+  	travels = chunk;
   });
     res.on('end', function() {
   });
 });
-
-console.log(travels);
 req.write(data)
 req.end();
 
-app.get('/', function(req, res) {
-  var travels = [];
-  res.render('index.html.ejs', {
-  travels: travels
-  });
-});
-
 app.get('/message', function(req, res) {
-  console.log("Lista")
-  var travels = [];
+  res.render('travels.html.ejs', {layout: false, travels: JSON.parse(travels).destinies});
+});
+
+app.get('/', function(req, res) {
   res.render('index.html.ejs', {
-  travels: travels
-    // Run your LED toggling code here
+  travels: []
   });
 });
-
-app.get('*', function(req, res){
-  // console.log("Error 404");
-  res.render('404.html.ejs');
-});
-
 
 app.listen(app.get('port'), function() {
 
