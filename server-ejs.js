@@ -30,6 +30,27 @@ var get_travels = {
   }
 };
 
+// reserve
+var get_reserve = {
+  host: 'localhost',
+  port: '5500',
+ //completar...
+};
+
+// confirm
+var get_confirm = {
+  host: 'localhost',
+  port: '5500',
+ //completar...
+};
+
+// cancel
+var get_cancel = {
+  host: 'localhost',
+  port: '5500',
+ //completar...
+};
+
 var travels = [];
 var data = JSON.stringify({
   'id': '2'

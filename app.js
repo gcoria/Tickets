@@ -44,6 +44,29 @@ var get_travels = {
   }
 };
 
+// reserve
+var get_reserve = {
+  host: 'localhost',
+  port: '4000',
+  // method: 'GET',
+  //completar..
+};
+
+// confirm
+var get_confirm = {
+  host: 'localhost',
+  port: '4000',
+  // method: 'GET',
+  //completar..
+};
+
+// cancel
+var get_cancel = {
+  host: 'localhost',
+  port: '4000',
+  // method: 'GET',
+  //completar..
+};
 
 function list_travels(){
   var msg = [];
@@ -61,7 +84,6 @@ function list_travels(){
   req.end();
   return msg;
 }
-
 
 //reserve
 var server = app.listen(5000,function() {

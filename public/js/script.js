@@ -48,7 +48,3 @@ function cancel(){
   $.ajax(get_cancel);
 }
 
-
-
-
-
