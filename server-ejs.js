@@ -19,7 +19,6 @@ var data = JSON.stringify({
   'id': '2'
 });
 
-
 var get_travels = {
   host: 'localhost',
   port: '5500',
@@ -73,5 +72,11 @@ app.get('*', function(req, res){
 
 app.listen(app.get('port'), function() {
 
-	
 });
+
+
+
+
+
+
+
