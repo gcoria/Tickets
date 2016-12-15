@@ -17,7 +17,10 @@
           <td><%= travels[i].destiny %></td>
           <td><%= travels[i].escalas %></td>
           <td><%= travels[i].precio  %></td>
-          <td><%= travels[i].action  %></td>
+          <td><button onclick="reserve()" class="btn btn-lg btn-warning">Reservar</button>
+              <button onclick="confirm()" class="btn btn-lg btn-success">Confirmar</button>
+              <button onclick="cancel()" class="btn btn-lg btn-danger">Cancelar</button>
+              <%= travels[i].action  %></td>
         </tr>
        <% }; %>
     </tbody>
