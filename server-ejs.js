@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
+var api = require("./api_request");
+var get = new api.request();
 
 var app = express();
 
@@ -14,21 +16,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
-
-var data = JSON.stringify({
-  'id': '2'
-});
-
-var get_travels = {
-  host: 'localhost',
-  port: '5500',
-  path: '/listDestinies',
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json; charset=utf-8',
-    'Content-Length': data.length
-  }
-};
 
 // reserve
 var get_reserve = {
@@ -51,25 +38,18 @@ var get_cancel = {
  //completar...
 };
 
-var travels = [];
-
-// var data = JSON.stringify({
-//   'id': '2'
-// });
-
-var req = http.request(get_travels, function(res) {
-  res.setEncoding('utf8');
-  res.on('data', function(chunk) {
-  	travels = chunk;
-  });
-    res.on('end', function() {
-  });
-});
-req.write(data)
-req.end();
-
 app.get('/message', function(req, res) {
-  res.render('travels.html.ejs', {layout: false, travels: JSON.parse(travels).destinies});
+  var travels = [];
+  var get_travels = http.request(get.destinies, function(resp) {
+    resp.setEncoding('utf8');
+    resp.on('data', function(chunk) {
+      travels = chunk;
+    });
+      resp.on('end', function() {
+      res.render('travels.html.ejs', {layout: false, travels: JSON.parse(travels).destinies });
+    });
+  });
+  get_travels.end();
 });
 
 app.get('/', function(req, res) {
