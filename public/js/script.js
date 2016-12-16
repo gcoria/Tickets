@@ -1,9 +1,9 @@
-function message(){
+function list_options(){
 
   var get_travels = {
     host: 'localhost',
     port: '5000',
-    url: '/message',
+    url: '/list_options',
     method: 'GET',
   };
  

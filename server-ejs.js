@@ -17,28 +17,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// reserve
-var get_reserve = {
-  host: 'localhost',
-  port: '5500',
- //completar...
-};
-
-// confirm
-var get_confirm = {
-  host: 'localhost',
-  port: '5500',
- //completar...
-};
-
-// cancel
-var get_cancel = {
-  host: 'localhost',
-  port: '5500',
- //completar...
-};
-
-app.get('/message', function(req, res) {
+// lista de paquetes de viajes
+app.get('/list_options', function(req, res) {
   var travels = [];
   var get_travels = http.request(get.destinies, function(resp) {
     resp.setEncoding('utf8');
@@ -50,6 +30,45 @@ app.get('/message', function(req, res) {
     });
   });
   get_travels.end();
+});
+
+//reservar paquete de viaje
+app.get('/reserve', function(req, res) {
+  var send_reserve = http.request(get.reserve, function(resp) {
+    resp.setEncoding('utf8');
+    resp.on('data', function(chunk) {
+    });
+      resp.on('end', function() {
+      console.log("Reserva Enviada | Respuesta Recibida");
+    });
+  });
+  send_reserve.end();
+});
+
+//confirmar paquete previamente reservado
+app.get('/confirm', function(req, res) {
+  var confirm = http.request(get.confirmation, function(resp) {
+    resp.setEncoding('utf8');
+    resp.on('data', function(chunk) {
+    });
+     resp.on('end', function() {
+      console.log("Confirmar Reserva | Respuesta Recibida");
+    });
+  });
+  confirm.end();
+});
+
+//cancelar paquete previamente reservado
+app.get('/cancel', function(req, res) {
+  var cancel_reservation = http.request(get.cancel, function(resp) {
+    resp.setEncoding('utf8');
+    resp.on('data', function(chunk) {
+    });
+    resp.on('end', function() {
+      console.log("Reserva Cancelada | Respuesta Recibida");
+    });
+  });
+  cancel_reservation.end();
 });
 
 app.get('/', function(req, res) {
