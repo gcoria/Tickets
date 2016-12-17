@@ -12,6 +12,7 @@ module.exports = {
          'Content-Length': data.length
        }
     };
+    this.destinies_url = 'http://localhost:' + port +'/list_options',
     this.reserve = {
        host: 'localhost',
        port: port,

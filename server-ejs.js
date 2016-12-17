@@ -4,10 +4,17 @@ var http = require('http');
 var api = require("./api_request");
 var chevalier = new api.request(5100);
 var monticas = new api.request(5500);
+var async = require('async');
+var request = require('request');
+
+
+
+
+
+
 
 var app = express();
 
-app.set('port', (5000));
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
@@ -18,18 +25,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // lista de paquetes de viajes
 app.get('/list_options', function(req, res) {
-  console.log(req.query);
   var travels = [];
-  var get_travels = http.request(monticas.destinies, function(resp) {
-    resp.setEncoding('utf8');
-    resp.on('data', function(chunk) {
-      travels = chunk;
+  async.concat([monticas.destinies_url, chevalier.destinies_url], function(url, callback) {
+    request(url, function(error, response, html) {
+      // Procesamiento de las respuestas, de a una a la vez
+      travels = travels.concat(JSON.parse(response.body).destinies);
+      callback(error, html);
     });
-      resp.on('end', function() {
-      res.render('travels.html.ejs', {layout: false, travels: JSON.parse(travels).destinies });
-    });
+  }, function(err, results) {
+    res.render('travels.html.ejs', {layout: false, travels: travels });
   });
-  get_travels.end();
 });
 
 //reservar paquete de viaje
@@ -71,12 +76,13 @@ app.get('/cancel', function(req, res) {
   cancel_reservation.end();
 });
 
+//Pagina principal
 app.get('/', function(req, res) {
   res.render('index.html.ejs', {
   travels: []
   });
 });
 
-app.listen(app.get('port'), function() {
+app.listen(5000, function() {
 
 });

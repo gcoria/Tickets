@@ -1,4 +1,4 @@
-{ "destinies": 
+{ "destinies":
   [
     {"origin": "Argentina", "destiny": "Brasil", "escalas": "", "precio": "500"},
     {"origin": "Argentina", "destiny": "Chile", "escalas": "Brasil", "precio": "800"},
