@@ -2,7 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
 var api = require("./api_request");
-var get = new api.request();
+var chevalier = new api.request(5100);
+var monticas = new api.request(5500);
 
 var app = express();
 
@@ -12,15 +13,14 @@ app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // lista de paquetes de viajes
 app.get('/list_options', function(req, res) {
+  console.log(req.query);
   var travels = [];
-  var get_travels = http.request(get.destinies, function(resp) {
+  var get_travels = http.request(monticas.destinies, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
       travels = chunk;
@@ -34,7 +34,7 @@ app.get('/list_options', function(req, res) {
 
 //reservar paquete de viaje
 app.get('/reserve', function(req, res) {
-  var send_reserve = http.request(get.reserve, function(resp) {
+  var send_reserve = http.request(monticas.reserve, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });
@@ -47,7 +47,7 @@ app.get('/reserve', function(req, res) {
 
 //confirmar paquete previamente reservado
 app.get('/confirm', function(req, res) {
-  var confirm = http.request(get.confirmation, function(resp) {
+  var confirm = http.request(monticas.confirmation, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });
@@ -60,7 +60,7 @@ app.get('/confirm', function(req, res) {
 
 //cancelar paquete previamente reservado
 app.get('/cancel', function(req, res) {
-  var cancel_reservation = http.request(get.cancel, function(resp) {
+  var cancel_reservation = http.request(monticas.cancel, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });
@@ -80,10 +80,3 @@ app.get('/', function(req, res) {
 app.listen(app.get('port'), function() {
 
 });
-
-
-
-
-
-
-

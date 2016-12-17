@@ -1,11 +1,11 @@
 var classes = require("./company");
 var fs = require("fs");
-var company = new classes.company("Monticas", 5500);
+var company = new classes.company("Chevalier", 5100);
 var info = __dirname + '/data/';
 
 //api
 company.server.get('/list_options', function (req, res) {
-  fs.readFile(info + "destinies.json", 'utf8', function (err, data) {
+  fs.readFile(info + "destinies_2.json", 'utf8', function (err, data) {
     res.end( data );
   });
 })

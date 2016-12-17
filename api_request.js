@@ -1,10 +1,10 @@
 var data = JSON.stringify({ 'id': '2' });
 
 module.exports = {
-  request: function () {
+  request: function (port) {
     this.destinies = {
        host: 'localhost',
-       port: '5500',
+       port: port,
        path: '/list_options',
        method: 'GET',
        headers: {
@@ -14,7 +14,7 @@ module.exports = {
     };
     this.reserve = {
        host: 'localhost',
-       port: '5500',
+       port: port,
        path: '/reserve',
        method: 'GET',
        headers: {
@@ -24,7 +24,7 @@ module.exports = {
     };
     this.confirmation = {
        host: 'localhost',
-       port: '5500',
+       port: port,
        path: '/confirm',
        method: 'GET',
        headers: {
@@ -34,7 +34,7 @@ module.exports = {
     };
     this.cancel = {
        host: 'localhost',
-       port: '5500',
+       port: port,
        path: '/cancel',
        method: 'GET',
        headers: {

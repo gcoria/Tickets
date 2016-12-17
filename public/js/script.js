@@ -1,8 +1,14 @@
 function list_options(){
+  var origin = $('#origin').val();
+  var destiny = $('#destiny').val();
 
   var get_travels = {
     host: 'localhost',
     port: '5000',
+    data: {
+      'origin' : origin,
+      'destiny' : destiny
+    },
     url: '/list_options',
     method: 'GET',
   };

@@ -1,8 +1,11 @@
 { "destinies": 
   [
-    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" },
-    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" },
-    {"origin": "Bloody Mary", "destiny": "la concha", "escalas": "[a,b,c]", "precio": "500","action": "Reservar" }
+    {"origin": "Argentina", "destiny": "Brasil", "escalas": "", "precio": "500"},
+    {"origin": "Argentina", "destiny": "Chile", "escalas": "Brasil", "precio": "800"},
+    {"origin": "Brasil", "destiny": "Argentina", "escalas": "", "precio": "500"},
+    {"origin": "Brasil", "destiny": "Chile", "escalas": "", "precio": "400"},
+    {"origin": "Chile", "destiny": "Argentina", "escalas": "Brasil", "precio": "400"},
+    {"origin": "Chile", "destiny": "Brasil", "escalas": "", "precio": "300"}
   ]
 }
 
