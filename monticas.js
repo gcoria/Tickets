@@ -2,6 +2,9 @@ var classes = require("./company");
 var fs = require("fs");
 var company = new classes.company("Monticas", 5500);
 var info = __dirname + '/data/';
+var plane_1 = 200;
+var plane_2 = 300;
+var plane_3 = 400;
 
 //api
 company.server.get('/list_options', function (req, res) {

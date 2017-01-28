@@ -8,11 +8,6 @@ var async = require('async');
 var request = require('request');
 
 
-
-
-
-
-
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
@@ -26,10 +21,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // lista de paquetes de viajes
 app.get('/list_options', function(req, res) {
   var travels = [];
-  async.concat([monticas.destinies_url, chevalier.destinies_url], function(url, callback) {
+  async.concatSeries([monticas.destinies_url, chevalier.destinies_url], function(url, callback) {
     request(url, function(error, response, html) {
       // Procesamiento de las respuestas, de a una a la vez
-      travels = travels.concat(JSON.parse(response.body).destinies);
+      if (response !== undefined)
+        travels = travels.concat(JSON.parse(response.body).destinies);
       callback(error, html);
     });
   }, function(err, results) {
