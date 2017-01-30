@@ -19,10 +19,14 @@ function list_options(){
 }
 
 function reserve(){
+  var seat = $('#seat').val();
 
   var get_reserve = {
     host: 'localhost',
     port: '5000',
+    data: {
+      'seat' : seat
+    },
     url: '/reserve',
     method: 'GET',
   };
@@ -31,10 +35,14 @@ function reserve(){
 }
 
 function confirm(){
+  var seat = $('#seat').val();
 
   var get_confirm = {
     host: 'localhost',
     port: '5000',
+    data: {
+      'seat' : seat
+    },
     url: '/confirm',
     method: 'GET',
   };
@@ -43,10 +51,14 @@ function confirm(){
 }
 
 function cancel(){
+  var seat = $('#seat').val();
 
   var get_cancel = {
     host: 'localhost',
     port: '5000',
+    data: {
+      'seat' : seat
+    },
     url: '/cancel',
     method: 'GET',
   };
