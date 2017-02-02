@@ -36,7 +36,7 @@ function reserve(){
 
 function confirm(){
   var seat = $('#seat').val();
-
+  alert("Estoy en confirm() script");
   var get_confirm = {
     host: 'localhost',
     port: '5000',
