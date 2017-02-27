@@ -15,6 +15,7 @@ company.server.get('/list_options', function (req, res) {
 
 company.server.get('/reserve', function (req, res) {
   console.log("*******Reserve Flight*******");
+  console.log("Asientos: " + req.headers.seats);
   res.sendStatus(200);
 })
 

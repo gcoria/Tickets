@@ -1,13 +1,10 @@
 function list_options(){
-  var origin = $('#origin').val();
-  var destiny = $('#destiny').val();
-
   var get_travels = {
     host: 'localhost',
     port: '5000',
     data: {
-      'origin' : origin,
-      'destiny' : destiny
+      origin : $('#origin').val(),
+      destiny : $('#destiny').val()
     },
     url: '/list_options',
     method: 'GET',
@@ -19,13 +16,12 @@ function list_options(){
 }
 
 function reserve(){
-  var seat = $('#seat').val();
 
   var get_reserve = {
     host: 'localhost',
     port: '5000',
     data: {
-      'seat' : seat
+      seat : $('#seat').val()
     },
     url: '/reserve',
     method: 'GET',
