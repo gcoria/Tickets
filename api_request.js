@@ -31,7 +31,8 @@ module.exports = {
        method: 'GET',
        headers: {
          'Content-Type': 'application/json; charset=utf-8',
-         'Content-Length': data.length
+         'Content-Length': data.length,
+         'seats': 0
        }
     };
     this.cancel = {
@@ -41,7 +42,8 @@ module.exports = {
        method: 'GET',
        headers: {
          'Content-Type': 'application/json; charset=utf-8',
-         'Content-Length': data.length
+         'Content-Length': data.length,
+         'seats': 0
        }
     };
   }
