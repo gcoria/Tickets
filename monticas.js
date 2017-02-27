@@ -14,18 +14,31 @@ company.server.get('/list_options', function (req, res) {
 })
 
 company.server.get('/reserve', function (req, res) {
+  var seats = req.headers.seats;
   console.log("*******Reserve Flight*******");
-  console.log("Asientos: " + req.headers.seats);
+  console.log("Asientos a reservar: " + seats);
+  console.log("Disponibles: " + plane_1);
+  console.log("Reserva Posible: " + (plane_1 > seats));
   res.sendStatus(200);
 })
 
 company.server.get('/confirm', function (req, res) {
+  var seats = req.headers.seats;
   console.log("*******Confirm flight*******");
+  console.log("Asientos Confirmados: " + seats);
+  console.log("Disponibles: " + plane_1);
+  plane_1 -= seats;
+  console.log("Confirmacion Posible: " + (plane_1 > seats));
   res.sendStatus(200);
 })
 
 company.server.get('/cancel', function (req, res) {
-  console.log("*******cancel flight*******");
+  var seats = req.headers.seats;
+  console.log("*******Reservas Cancelada*******");
+  console.log("Asientos: " + seats);
+  console.log("Disponibles: " + plane_1);
+  plane_1 = parseInt(plane_1) + parseInt(seats);
+  console.log("Cancelacion, Asientos Disponibles: " + plane_1 );
   res.sendStatus(200);
 })
 

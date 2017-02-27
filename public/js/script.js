@@ -31,13 +31,12 @@ function reserve(){
 }
 
 function confirm(){
-  var seat = $('#seat').val();
   alert("Estoy en confirm() script");
   var get_confirm = {
     host: 'localhost',
     port: '5000',
     data: {
-      'seat' : seat
+      seat : seat = $('#seat').val()
     },
     url: '/confirm',
     method: 'GET',
@@ -47,13 +46,11 @@ function confirm(){
 }
 
 function cancel(){
-  var seat = $('#seat').val();
-
   var get_cancel = {
     host: 'localhost',
     port: '5000',
     data: {
-      'seat' : seat
+      seat : $('#seat').val()
     },
     url: '/cancel',
     method: 'GET',
