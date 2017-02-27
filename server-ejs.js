@@ -35,6 +35,7 @@ app.get('/list_options', function(req, res) {
 
 //reservar paquete de viaje
 app.get('/reserve', function(req, res) {
+  monticas.reserve.headers["seats"] = req.query.seat;
   var send_reserve = http.request(monticas.reserve, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
