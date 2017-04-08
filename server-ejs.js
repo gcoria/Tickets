@@ -45,6 +45,7 @@ app.get('/reserve', function(req, res) {
     });
   });
   send_reserve.end();
+  res.send('Reserva Finalizada Correctamente');
 });
 
 //confirmar paquete previamente reservado

@@ -1,0 +1,11 @@
+{
+  "name": "salepoint",
+  "version": "1.0.0",
+  "description": "Sale point for travel agencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gaston Coria, Dario Astorga",
+  "license": "ISC"
+}
