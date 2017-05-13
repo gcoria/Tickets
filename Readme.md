@@ -37,5 +37,10 @@ Correr las empresas
 	node serverChevalier.js 
 	node serverMonticas.js
 	```
-### Por ultimo abrimos nuestro explorador y colocamos: localhost:5000 
+Correr la App
+=============
+- Abrimos nuestro explorador y colocamos:  
+	```
+	localhost:5000 
+	```
 
