@@ -1,6 +1,6 @@
 var enterprise = require("./company/company");
 var fs = require("fs");
-var company = new enterprise.company("Chevalier", 5100);
+var company = new enterprise.company("serverChevalier", 5100);
 var info = __dirname + '/data/';
 
 //api

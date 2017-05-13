@@ -1,7 +1,7 @@
 var enterprise = require("./company/company");
 var fs = require("fs");
 
-var company = new enterprise.company("Monticas", 5500);
+var company = new enterprise.company("serverMonticas", 5500);
 var info = __dirname + '/data/';
 
 var plane_1 = 200;

@@ -1,19 +1,21 @@
+/*
+ * Dependencies
+ */
 var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
-var api = require("./api_request");
-var chevalier = new api.request(5100);
-var monticas = new api.request(5500);
+var api = require("./rest_api/api_request");
+var serverChevalier = new api.request(5100);
+var serverMonticas = new api.request(5500);
 var async = require('async');
 var request = require('request');
 
-
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
-app.set('views', __dirname + '/public/views');
-app.engine('html', require('ejs').renderFile);
+app.set('views', __dirname + '/views/salepointArgviews');
 app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+app.use(express.static(__dirname + '/public'))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // lista de paquetes de viajes
 app.get('/list_options', function(req, res) {
   var travels = [];
-  async.concatSeries([monticas.destinies_url, chevalier.destinies_url], function(url, callback) {
+  async.concatSeries([serverMonticas.destinies_url, serverChevalier.destinies_url], function(url, callback) {
     request(url, function(error, response, html) {
       // Procesamiento de las respuestas, de a una a la vez
       if (response !== undefined)
