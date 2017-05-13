@@ -12,17 +12,16 @@ Herramientas requeridas
 
 Instalacion
 ============
-- Instale los paquetes:
+- Dirigirnos al directorio:
 	```
 	cd Tickets 
+	```
+- Instale los paquetes:
+	```
 	npm install 
-	```
-- Instale body-parser con: 
-	``` 
+
 	npm install body-parser 
-	```
-- Instale async con: 
-	``` 
+
 	npm install async
 	```
 
