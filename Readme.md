@@ -10,9 +10,14 @@ Herramientas requeridas
 [Node]: https://nodejs.org
 [Npm]: https://www.npmjs.com/
 
-- Instale body-parser con: npm install body-parser
-- Instale async con: npm install async
-
+- Instale body-parser con: 
+	``` 
+	npm install body-parser 
+	```
+- Instale async con: 
+	``` 
+	npm install async
+	```
 Correr puntos de venta
 ===========================
 - Dirigirnos al directorio:
