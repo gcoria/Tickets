@@ -16,7 +16,7 @@ Instalacion
 	```
 	cd Tickets 
 	```
-- Instale los paquetes:
+- Instale el paquete y modulos:
 	```
 	npm install 
 
