@@ -10,7 +10,7 @@ var plane_3 = 400;
 
 //api
 company.server.get('/list_options', function (req, res) {
-  fs.readFile(info + "destinies.json", 'utf8', function (err, data) {
+  fs.readFile(info + "destinies_1.json", 'utf8', function (err, data) {
     res.end( data );
   });
 })

@@ -25,7 +25,7 @@ company.server.get('/cancel', function (req, res) {
   res.sendStatus(200);
 })
 
-//server de la
+//server 
 var server = company.server.listen(company.port, function() {
   console.log(company.name, company.port)
 });

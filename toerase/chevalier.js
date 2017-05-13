@@ -5,7 +5,7 @@ var info = __dirname + '/data/';
 
 //api
 company.server.get('/list_options', function (req, res) {
-  fs.readFile(info + "destinies_2.json", 'utf8', function (err, data) {
+  fs.readFile(info + "destiniesArg.json", 'utf8', function (err, data) {
     res.end( data );
   });
 })

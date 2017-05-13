@@ -1,10 +1,10 @@
 { "destinies":
   [
-    {"origin": "Argentina", "destiny": "Brasil", "escalas": "", "precio": "300"},
-    {"origin": "Argentina", "destiny": "Chile", "escalas": "Brasil", "precio": "1000"},
-    {"origin": "Brasil", "destiny": "Argentina", "escalas": "", "precio": "400"},
-    {"origin": "Brasil", "destiny": "Chile", "escalas": "", "precio": "600"},
-    {"origin": "Chile", "destiny": "Argentina", "escalas": "Brasil", "precio": "700"},
-    {"origin": "Chile", "destiny": "Brasil", "escalas": "", "precio": "500"}
+    {"origin": "Rio Cuarto", "destiny": "Buenos Aires", "escalas": "", "precio": "300"},
+    {"origin": "Villa Maria", "destiny": "Cordoba", "escalas": "Rio Cuarto", "precio": "1000"},
+    {"origin": "Santiago del Estero", "destiny": "Buenos Aires", "escalas": "", "precio": "400"},
+    {"origin": "Buenos Aires", "destiny": "Cordoba", "escalas": "", "precio": "600"},
+    {"origin": "Buenos Aires", "destiny": "San Juan", "escalas": "Santa Fe", "precio": "700"},
+    {"origin": "Buenos Aires", "destiny": "San Luis", "escalas": "", "precio": "500"}
   ]
 }
