@@ -1,4 +1,4 @@
-# Tickets
+# Sistema Distribuido Tickets
 
 ## Instalacion in MAC OS
 ### Instale node de: https://nodejs.org/en/ Version v6.9.2 LTS
@@ -8,8 +8,30 @@
 ### Instale async con: npm install async
 
 ## Para correr App
-### En una terminal escribimos: node server-ejs.js
-### En otra terminal escribimos: node monticas.js
-### En otra terminal escribimos: node chevalier.js
-### Por ultimo corremos en nuestro explorardor: localhost:5000 
+
+Correr puntos de venta
+===========================
+- Dirigirnos al directorio:
+	```
+	cd salepoint 
+	```
+	
+- Ejecutar el punto de venta:
+	``` 
+	node salepointArg.js 
+	```
+	
+Correr las empresas
+===========================
+- Dirigirnos al directorio:
+	```
+	cd enterprise 
+	```
+	
+- Ejecutar cualquiera de los servidores:
+	``` 
+	node serverChevalier.js 
+	node serverMonticas.js
+	```
+### Por ultimo abrimos nuestro explorador y colocamos: localhost:5000 
 
