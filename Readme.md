@@ -10,6 +10,13 @@ Herramientas requeridas
 [Node]: https://nodejs.org
 [Npm]: https://www.npmjs.com/
 
+Instalacion
+============
+- Instale los paquetes:
+	```
+	cd Tickets 
+	npm install 
+	```
 - Instale body-parser con: 
 	``` 
 	npm install body-parser 
@@ -18,6 +25,7 @@ Herramientas requeridas
 	``` 
 	npm install async
 	```
+
 Correr puntos de venta
 ===========================
 - Dirigirnos al directorio:
