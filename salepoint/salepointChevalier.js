@@ -12,7 +12,7 @@ var request = require('request');
 
 var app = express();
 
-app.set('views', __dirname + '/views/salepointArgviews');
+app.set('views', __dirname + '/views/salepointChevalierViews');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 app.use(express.static(__dirname + '/public'))

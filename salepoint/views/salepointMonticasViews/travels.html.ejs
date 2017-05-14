@@ -1,0 +1,29 @@
+<div class="container" id="travels">
+  <h2>Elija entre sus opciones de viaje</h2>            
+  <table class="table table-responsive text-center">
+    <thead>
+      <tr>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Escalas</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i< travels.length; i++) {%>
+        <tr>
+          <td><%= travels[i].origin  %></td>
+          <td><%= travels[i].destiny %></td>
+          <td><%= travels[i].escalas %></td>
+          <td><%= travels[i].precio  %></td>
+          <td><button onclick="reserve()" class="btn btn-lg btn-warning">Reservar</button>
+              <button onclick="confirm()" class="btn btn-lg btn-success">Confirmar</button>
+              <button onclick="cancel()"  class="btn btn-lg btn-danger">Cancelar</button>
+          </td>
+        </tr>
+       <% }; %>
+    </tbody>
+  </table>
+</div>
+
