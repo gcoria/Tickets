@@ -54,11 +54,9 @@ Correr la App
 =============
 - Abrimos nuestro explorador y colocamos:  
 	```
-	Chevalier
 	localhost:5000 
 	```
 	```
-	Monticas
 	localhost:5001  
 	```
 
