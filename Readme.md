@@ -34,7 +34,7 @@ Correr puntos de venta
 	
 - Ejecutar el punto de venta:
 	``` 
-	node salepointArg.js 
+	node salepointChevalier.js 
 	```
 	
 Correr las empresas
