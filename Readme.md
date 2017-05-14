@@ -35,6 +35,7 @@ Correr puntos de venta
 - Ejecutar el punto de venta:
 	``` 
 	node salepointChevalier.js 
+	node salepointMonticas.js 
 	```
 	
 Correr las empresas
@@ -53,6 +54,11 @@ Correr la App
 =============
 - Abrimos nuestro explorador y colocamos:  
 	```
+	Chevalier
 	localhost:5000 
+	```
+	```
+	Monticas
+	localhost:5001  
 	```
 
