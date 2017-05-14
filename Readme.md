@@ -52,10 +52,11 @@ Correr las empresas
 	```
 Correr la App
 =============
-- Abrimos nuestro explorador y colocamos:  
+- Abrimos un explorador y colocamos:  
 	```
 	localhost:5000 
 	```
+- Abrimos el segundo explorador y colocamos:  
 	```
 	localhost:5001  
 	```
