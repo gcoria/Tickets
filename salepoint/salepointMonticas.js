@@ -37,8 +37,8 @@ app.get('/list_options', function(req, res) {
 
 //reservar paquete de viaje
 app.get('/reserve', function(req, res) {
-  monticas.reserve.headers["seats"] = req.query.seat;
-  var send_reserve = http.request(monticas.reserve, function(resp) {
+  serverMonticas.reserve.headers["seats"] = req.query.seat;
+  var send_reserve = http.request(serverMonticas.reserve, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });
@@ -52,8 +52,8 @@ app.get('/reserve', function(req, res) {
 
 //confirmar paquete previamente reservado
 app.get('/confirm', function(req, res) {
-  monticas.confirmation.headers["seats"] = req.query.seat;
-  var confirm = http.request(monticas.confirmation, function(resp) {
+  serverMonticas.confirmation.headers["seats"] = req.query.seat;
+  var confirm = http.request(serverMonticas.confirmation, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });
@@ -66,8 +66,8 @@ app.get('/confirm', function(req, res) {
 
 //cancelar paquete previamente reservado
 app.get('/cancel', function(req, res) {
-  monticas.cancel.headers["seats"] = req.query.seat;
-  var cancel_reservation = http.request(monticas.cancel, function(resp) {
+  serverMonticas.cancel.headers["seats"] = req.query.seat;
+  var cancel_reservation = http.request(serverMonticas.cancel, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
     });

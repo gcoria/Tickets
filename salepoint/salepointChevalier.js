@@ -5,7 +5,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
 var api = require("./rest_api/api_request");
+
 var salepoint_api = require("./rest_api/salepoint_api"); //Para los metodos
+
 var serverChevalier = new api.request(5100);
 var serverMonticas = new api.request(5500);
 var async = require('async');
@@ -54,6 +56,9 @@ app.get('/reserve', function(req, res) {
 //confirmar paquete previamente reservado
 app.get('/confirm', function(req, res) {
   serverMonticas.confirmation.headers["seats"] = req.query.seat;
+
+  salepoint_api.confirmTravels(req, res);
+
   var confirm = http.request(serverMonticas.confirmation, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
