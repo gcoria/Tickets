@@ -1,10 +1,10 @@
 { "destinies":
   [
-    {"origin": "Rio Cuarto", "destiny": "Buenos Aires", "escalas": "", "precio": "300"},
-    {"origin": "Villa Maria", "destiny": "Cordoba", "escalas": "Rio Cuarto", "precio": "1000"},
-    {"origin": "Santiago del Estero", "destiny": "Buenos Aires", "escalas": "", "precio": "400"},
-    {"origin": "Buenos Aires", "destiny": "Cordoba", "escalas": "", "precio": "600"},
-    {"origin": "Buenos Aires", "destiny": "San Juan", "escalas": "Santa Fe", "precio": "700"},
-    {"origin": "Buenos Aires", "destiny": "San Luis", "escalas": "", "precio": "500"}
+    {"origin": "Rio Cuarto", "destiny": "Buenos Aires", "escalas": "", "precio": "300", "reserved" : "0", "places": "200", "id": 1},
+    {"origin": "Villa Maria", "destiny": "Cordoba", "escalas": "Rio Cuarto", "precio": "1000", "reserved" : "0", "places": "200", "id": 2},
+    {"origin": "Santiago del Estero", "destiny": "Buenos Aires", "escalas": "", "precio": "400", "reserved" : "0", "places": "200", "id": 3},
+    {"origin": "Buenos Aires", "destiny": "Cordoba", "escalas": "", "precio": "600", "reserved" : "0", "places": "200", "id": 4},
+    {"origin": "Buenos Aires", "destiny": "San Juan", "escalas": "Santa Fe", "precio": "700", "reserved" : "0", "places": "200", "id": 5},
+    {"origin": "Buenos Aires", "destiny": "San Luis", "escalas": "", "precio": "500", "reserved" : "0", "places": "200", "id": 6}
   ]
 }

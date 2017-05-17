@@ -1,11 +1,11 @@
 { "destinies":
   [
-    {"origin": "Rio Cuarto", "destiny": "Laboulaye", "escalas": "Mackenna", "precio": "500"},
-    {"origin": "Laboulaye", "destiny": "Rio Cuarto", "escalas": "", "precio": "800"},
-    {"origin": "Mackenna", "destiny": "Rio Cuarto", "escalas": "Laboulaye", "precio": "500"},
-    {"origin": "Villa Maria", "destiny": "Cordoba", "escalas": "", "precio": "400"},
-    {"origin": "Rio Cuarto", "destiny": "Mackenna", "escalas": "", "precio": "400"},
-    {"origin": "Santa Fe", "destiny": "Cordoba", "escalas": "", "precio": "300"}
+    {"origin": "Argentina", "destiny": "Brasil", "escalas": "", "precio": "500", "reserved" : "0", "places": "200", "id": 1 },
+    {"origin": "Argentina", "destiny": "Chile", "escalas": "Brasil", "precio": "800", "reserved" : "0", "places": "200", "id": 2},
+    {"origin": "Brasil", "destiny": "Argentina", "escalas": "", "precio": "500", "reserved" : "0", "places": "200", "id": 3},
+    {"origin": "Brasil", "destiny": "Chile", "escalas": "", "precio": "400", "reserved" : "0", "places": "200", "id": 4},
+    {"origin": "Chile", "destiny": "Argentina", "escalas": "Brasil", "precio": "400", "reserved" : "0", "places": "200", "id": 5},
+    {"origin": "Chile", "destiny": "Brasil", "escalas": "", "precio": "300", "reserved" : "0", "places": "200", "id": 6}
   ]
 }
 
