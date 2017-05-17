@@ -41,6 +41,11 @@ app.get('/list_options', function(req, res) {
 //reservar paquete de viaje
 app.get('/reserve', function(req, res) {
   serverMonticas.reserve.headers["seats"] = req.query.seat;
+
+
+  salepoint_api.reserveTravels(req);
+
+
   var send_reserve = http.request(serverMonticas.reserve, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
@@ -56,9 +61,6 @@ app.get('/reserve', function(req, res) {
 //confirmar paquete previamente reservado
 app.get('/confirm', function(req, res) {
   serverMonticas.confirmation.headers["seats"] = req.query.seat;
-
-  salepoint_api.confirmTravels(req, res);
-
   var confirm = http.request(serverMonticas.confirmation, function(resp) {
     resp.setEncoding('utf8');
     resp.on('data', function(chunk) {
